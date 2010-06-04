@@ -47,14 +47,14 @@ SEXP put(SEXP Rptr, SEXP key, SEXP value) {
   return R_NilValue;
 };
 
-SEXP get(SEXP Rptr, SEXP str) {
+SEXP get(SEXP Rptr, SEXP key) {
   TCHDB *hdb = (TCHDB*) R_ExternalPtrAddr(Rptr);
   int ecode;
   char *value;
 
   SEXP result;
 
-  value = tchdbget2(hdb, CHAR(STRING_ELT(str, 0)));
+  value = tchdbget2(hdb, CHAR(STRING_ELT(key, 0)));
   if(value){
     result = mkString(value);
     free(value);
@@ -93,17 +93,3 @@ SEXP iternext(SEXP Rptr) {
     return R_NilValue;
   }
 };
-
-/* SEXP iternext(SEXP Rptr) { */
-/*   TCHDB *hdb = (TCHDB*) R_ExternalPtrAddr(Rptr); */
-/*   char *key, *value; */
-/*   while((key = tchdbiternext2(hdb)) != NULL){ */
-/*     value = tchdbget2(hdb, key); */
-/*     if(value){ */
-/*       printf("%s:%s\n", key, value); */
-/*       free(value); */
-/*     } */
-/*     free(key); */
-/*   } */
-/*   return R_NilValue; */
-/* }; */
