@@ -1,0 +1,9 @@
+useDynLib(RTokyoCabinet)
+
+export(TokyoCabinet,
+       TokyoCabinetPut,
+       TokyoCabinetGet,
+       TokyoCabinetIterInit,
+       TokyoCabinetIterNext,
+       TokyoCabinetClose)
+
