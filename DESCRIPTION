@@ -1,0 +1,11 @@
+Package: RTokyoCabinet
+Type: Package
+Title: TokyoCabinet interface for R
+Version: 0.01
+Date: 2010-06-08
+Author: Yasuhisa Yoshida
+Maintainer: Yasuhisa Yoshida <syou6162@gmail.com>
+Description: This package is the interface of TokyoCabinet.
+License: What license is it under?
+LazyLoad: yes
+Packaged: Tue June 8 00:33:06 2010; yasuhisa
