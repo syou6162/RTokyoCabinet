@@ -22,15 +22,11 @@
   Yasuhisa Yoshida
 }
 \references{
-  ~~ Nonparametric and Semiparametric Models ~~
+  http://1978th.net/tokyocabinet/index.html
 }
 \keyword{ package }
 \keyword{ database }
 \keyword{ interface }
-\seealso{
-  ~~ Optional links to other man pages, e.g. ~~
-  ~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
 \examples{
 hdb <- TokyoCabinet("casket.hdb")
 
